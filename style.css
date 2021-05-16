@@ -1,4 +1,94 @@
-body {background-color:tan;}
-h1{color:green;}
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1 {
+    color: grey;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
+.maindiv {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    color: black;
+    min-width: 50vh;
+    min-height: 50vh;
+    max-width: 80vh;
+    max-height: 80vh;
+    width: 50%;
+    height: 50%;
+    padding: 20px;
+    border-radius: 25px;
+    justify-content: space-around;
+    margin-top: 15vh;
+}
 
+.maindiv h1 {
+    text-align: center;
+}
+
+.form-input {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    grid-column-gap: 1%;
+    margin-inline: 15%;
+    max-width: 50vh;
+}
+.form-input label {
+    padding-left: 20%;
+}
+.form-input input {
+    cursor: pointer;
+}
+.form-input select {
+    width: min-content;
+    cursor: pointer;
+}
+.maindiv button {
+    cursor: pointer;
+    background: transparent;
+    border: 2px solid black;
+    border-radius: 50px;
+    transition: 200ms linear;
+    margin: 5px;
+    padding: 5px;
+}
+.maindiv button:hover {
+    background: black;
+    color: white;
+}
+
+.result span {
+    position: relative;
+    left: 10%;
+    margin-top: 5%;
+}
+footer {
+    display: flex;
+    bottom: 1%;
+    position: absolute;
+    width: fit-content;
+    background: rgb(50, 51, 51);
+    border-radius: 50px;
+    color: white;
+    width: auto;
+    align-items: center;
+    justify-content: space-around;
+}
+footer .footer-text {
+    margin: 5px;
+}
+footer img {
+    margin: 5px 5px 5px 5px;
+    border-radius: 50px;
+}
