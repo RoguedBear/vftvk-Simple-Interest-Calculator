@@ -1,16 +1,74 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Web App - Simple Interest Calculator 🧠</title>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css" />
     </head>
+
     <body>
-        <h1>Simple Interest Calculator</h1>
+        <div class="maindiv">
+            <h1>Simple Interest Calculator</h1>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+            <div class="principal-input form-input">
+                <label for="principal">Amount</label>
+                <input
+                    type="number"
+                    id="principal"
+                    onchange="validatePrincipal()"
+                />
+            </div>
+            <div class="rate-input form-input">
+                <label for="rate">Rate</label>
+                <input
+                    type="range"
+                    id="rate"
+                    min="1"
+                    max="20"
+                    step="0.25"
+                    value="10.25"
+                    onchange="updateRate()"
+                    oninput="updateRate()"
+                />
+                <span id="rate_val">10.25%</span>
+            </div>
 
-        <button onclick="compute()">Compute</button>
+            <div class="year-input form-input">
+                <label for="years">No. of Years</label>
+                <select name="years" id="years">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+            <div class="result">
+                <button onclick="compute()">Compute Interest</button>
+                <br />
+                <span class="result" id="result"></span>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-text">
+                &#169; This Calculator belongs to RoguedBear
+            </div>
+            <img
+                src="https://avatars.githubusercontent.com/u/39442192?s=60&amp;v=4"
+                alt="@RoguedBear"
+                size="20"
+                class="avatar-user avatar avatar-small"
+                width="20"
+                height="20"
+            />
+        </footer>
     </body>
 </html>
